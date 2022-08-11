@@ -1,0 +1,24 @@
+/* eslint-disable no-undef */
+const { config } = require('dotenv')
+config()
+
+const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI_TEST = process.env.MONGODB_URI_TEST
+const NODE_ENV = process.env.NODE_ENV
+const URL_CLIENT = process.env.URL_CLIENT
+
+const CLOUDINARY_CLOUD_NAME = process.env.CLOUDINARY_NAME
+const CLOUDINARY_API_KEY = process.env.CLOUDINARY_API_KEY
+const CLOUDINARY_API_SECRET = process.env.CLOUDINARY_API_SECRET
+const CLOUDINARY_URL = `cloudinary://${CLOUDINARY_API_KEY}:${CLOUDINARY_API_SECRET}@${CLOUDINARY_CLOUD_NAME}`
+
+module.exports = {
+	MONGODB_URI,
+	MONGODB_URI_TEST,
+	NODE_ENV,
+	URL_CLIENT,
+	CLOUDINARY_CLOUD_NAME,
+	CLOUDINARY_API_KEY,
+	CLOUDINARY_API_SECRET,
+	CLOUDINARY_URL,
+}
